@@ -1,0 +1,163 @@
+body {
+  background: #dadada;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-poke {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: poke-rotate 2s ease-in 0.5s infinite normal running;
+  z-index: 4;
+}
+
+@keyframes poke-rotate {
+  0% {
+    transform: translate(10px, 0px) rotate(10deg);
+  }
+
+  5% {
+    transform: translate(0px, 0px);
+  }
+
+  10% {
+    transform: translate(-10px, 0px) rotate(20deg);
+  }
+  20% {
+    transform: translate(10px 5px) rotate(50deg);
+  }
+  80% {
+    transform: translate(-10px, 22px) rotate(-20deg);
+  }
+}
+
+.white-circle,
+.red-circle {
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 100%;
+  z-index: 2;
+}
+
+.white-circle {
+  animation: poke-shadow-white 1.5s linear 0.2s infinite reverse running;
+}
+
+@keyframes poke-shadow-white {
+  from {
+    box-shadow: -10px 10px 20px grey inset;
+  }
+
+  to {
+    box-shadow: -10px 8px 20px grey inset;
+  }
+}
+
+.red-circle {
+  position: absolute;
+  background: #fb2422;
+  clip-path: polygon(100% 0%, 0 0%, 0% 50%, 100% 50%);
+  animation: poke-shadow-circle 1.5s linear 0.2s infinite reverse running;
+}
+
+@keyframes poke-shadow-circle {
+  from {
+    box-shadow: -10px 5px 5px #ec4f4f inset;
+  }
+
+  to {
+    box-shadow: -10px 5px 5px #ec4f4f inset;
+  }
+}
+
+.line-black {
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  border-radius: 2px;
+  background: #0d0d0d;
+  z-index: 3;
+}
+
+.circle-black {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background-color: #0d0d0d;
+  z-index: 3;
+}
+
+.circle-grey-interior {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: #dadada;
+  z-index: 3;
+  animation: poke-center-grey 1.5s linear 0.2s infinite reverse running;
+}
+
+@keyframes poke-center-grey {
+  0% {
+    background: #dadada;
+  }
+  30% {
+    background: #fb2422;
+  }
+}
+
+.circle-white-center {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: white;
+  box-shadow: 0px 0px 5px black;
+  z-index: 3;
+  animation: poke-center 1.5s linear 0.2s infinite reverse running;
+}
+
+@keyframes poke-center {
+  from {
+    background: #c2403e;
+  }
+  to {
+    background: #fb2422;
+  }
+}
+
+.shadow-bottom {
+  position: absolute;
+  bottom: 15em;
+  border-radius: 100%;
+  background: #8c8c8c70;
+  width: 290px;
+  height: 50px;
+  animation: poke-shadow 2s linear 0.5s infinite normal running;
+  z-index: 0;
+}
+
+@keyframes poke-shadow {
+  0% {
+    box-shadow: 0 0 5px #8c8c8c;
+    width: 290px;
+  }
+
+  80% {
+    width: 150px;
+  }
+
+  100% {
+    width: 270px;
+    box-shadow: 0 0 5px #8c8c8c;
+  }
+}
