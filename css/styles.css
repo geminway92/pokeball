@@ -142,9 +142,12 @@ body {
 
 .shadow-bottom {
   position: absolute;
+  top: 25em;
+  left: 10em;
   border-radius: 100%;
   background: #8c8c8c70;
-  width: 290px;
+  margin: auto;
+  width: 330px;
   height: 50px;
   animation: poke-shadow 2s linear 0.5s infinite normal running;
   z-index: -1;
@@ -153,15 +156,15 @@ body {
 @keyframes poke-shadow {
   0% {
     box-shadow: 0 0 5px #8c8c8c;
-    width: 300px;
+    width: 330px;
   }
 
   80% {
-    width: 150px;
+    width: 170px;
   }
 
   100% {
-    width: 270px;
+    width: 300px;
     box-shadow: 0 0 5px #8c8c8c;
   }
 }
@@ -169,10 +172,6 @@ body {
 @media screen and (min-width: 320px) {
   .container {
     transform: translate(-80px);
-  }
-
-  .shadow-bottom {
-    transform: translate(150px, -105px);
   }
 }
 
@@ -184,7 +183,6 @@ body {
 
 @media screen and (min-width: 400px) {
   .container {
-    margin: auto;
     transform: translate(0px);
   }
 }
