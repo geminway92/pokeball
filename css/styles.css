@@ -8,6 +8,11 @@ body {
   align-items: center;
 }
 
+.container {
+  width: 500px;
+  height: min-content;
+}
+
 .container-poke {
   width: 500px;
   height: 500px;
@@ -137,13 +142,12 @@ body {
 
 .shadow-bottom {
   position: absolute;
-  bottom: 15em;
   border-radius: 100%;
   background: #8c8c8c70;
   width: 290px;
   height: 50px;
   animation: poke-shadow 2s linear 0.5s infinite normal running;
-  z-index: 0;
+  z-index: -1;
 }
 
 @keyframes poke-shadow {
@@ -159,5 +163,36 @@ body {
   100% {
     width: 270px;
     box-shadow: 0 0 5px #8c8c8c;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    transform: translate(-80px);
+  }
+
+  .shadow-bottom {
+    transform: translate(100px, -105px);
+  }
+}
+
+@media screen and (min-width: 370px) {
+  .container {
+    transform: translate(-60px);
+  }
+
+  .shadow-bottom {
+    transform: translate(120px, -105px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .container {
+    margin: auto;
+    transform: translate(0px);
+  }
+
+  .shadow-bottom {
+    transform: translate(120px, -105px);
   }
 }
